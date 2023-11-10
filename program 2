@@ -1,0 +1,22 @@
+public class ElementSearcher {
+    public static <T> boolean searchElement(T[] array, T element) {
+        for (T el : array) {
+            if (el.equals(element)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        // Example usage
+        Integer[] numbers = {1, 2, 3, 4, 5};
+        int searchNumber = 3;
+
+        if (searchElement(numbers, searchNumber)) {
+            System.out.println(searchNumber + " found in the array.");
+        } else {
+            System.out.println(searchNumber + " not found in the array.");
+        }
+    }
+}
